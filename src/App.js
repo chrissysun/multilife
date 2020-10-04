@@ -3,6 +3,7 @@ import './App.css';
 
 // import components
 import Form from './components/Form';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <h2>Ever feel like you're living a double life? Triple life? We get you. </h2>
         <h3>Efficiently manage all of your tasks in one place so you can stay on top of the game as the boss that you are. ;D</h3> 
       <Form />
+      <TodoList />
     </div>
   );
 }
