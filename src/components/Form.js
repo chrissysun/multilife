@@ -1,13 +1,13 @@
 import React from "react";
 
-const Form = ({ input, setInput, todos, setTodos }) => {
+const Form = ({ input, setInput, todos, setTodos, setStatus }) => {
     
     // handle text input
     const inputHandler = (e) => {
-        console.log(e.target.value);
         setInput(e.target.value);
     };
 
+    // handle input after submission
     const submitTodoHandler = (e) => {
         e.preventDefault(); // prevent refresh
         setTodos([
@@ -17,6 +17,10 @@ const Form = ({ input, setInput, todos, setTodos }) => {
         ]);
         setInput(''); // clear entry box after submission
     };
+
+    const statusHandler = (e) => {
+        setStatus(e.target.value);
+    }; 
 
     return (
         <form>
@@ -30,7 +34,7 @@ const Form = ({ input, setInput, todos, setTodos }) => {
                 <i className="fas fa-plus-square"></i>
             </button>
             <div className= "select">
-            <select name= "todos" className= "filter-todo">
+            <select onChange = {statusHandler} name= "todos" className= "filter-todo">
                 <option value= "all">All</option>
                 <option value= "completed">Completed</option>
                 <option value= "uncompleted">Uncompleted</option>
