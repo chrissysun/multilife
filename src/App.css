@@ -3,14 +3,19 @@
     padding: 0;
     box-sizing: border-box;
   }
+
   body {
     background-image: linear-gradient(90deg, #ccffff 0%, #ccccff 100%);
     color: black;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
   }
+
   header {
     font-size: 2rem;
+    color: #9999ff;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    text-shadow: 2px 2px white;
   } 
   
   header,
@@ -20,6 +25,7 @@
     justify-content: center;
     align-items: center;
   }
+
   form input,
   form button {
     padding: 0.5rem;
@@ -27,16 +33,19 @@
     border: none;
     background: white;
   }
+
   form button {
     color: #9999ff;
     background: #f7fffe;
     cursor: pointer;
     transition: all 0.3s ease;
   }
+
   form button:hover {
     background: #9999ff;
     color: white;
   }
+
   .todo-container {
     display: flex;
     justify-content: center;
@@ -58,25 +67,29 @@
     align-items: center;
     transition: all 1s ease;
   }
+
   .filter-todo {
     padding: 1rem;
   }
+
   .todo li {
     flex: 1;
   }
   
   .trash-btn,
   .complete-btn {
-    background: #ff6f47;
+    background: #cccccc;
     color: white;
     border: none;
     padding: 1rem;
     cursor: pointer;
     font-size: 1rem;
   }
+
   .complete-btn {
-    background: rgb(11, 212, 162);
+    background: #9999ff;
   }
+
   .todo-item {
     padding: 0rem 0.5rem;
   }
@@ -96,7 +109,7 @@
     opacity: 0.5;
   }
   
-  /*CUSTOM SELECTOR */
+  /* Custom Selector */
   select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -114,12 +127,14 @@
     position: relative;
     overflow: hidden;
   }
+
   select {
     color: #9999ff;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
     width: 12rem;
   }
+
   /* Arrow */
   .select::after {
     content: "\25BC";
@@ -131,9 +146,8 @@
     cursor: pointer;
     pointer-events: none;
   }
-  /* Transition */
-  /*
-  .select:hover::after {
-    transform: scale(1.5);
+
+  div {
+    text-align: center;
   }
-  */
+  

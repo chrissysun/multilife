@@ -59,8 +59,11 @@ function App() {
       <header>
         <h1>multilife</h1>
       </header>
+      <div>
         <h2>Ever feel like you're living a double life? Triple life? We get you. </h2>
-        <h3>Efficiently manage all of your tasks in one place so you can stay on top of the game as the boss that you are. ;D</h3> 
+        <h3><i>Efficiently manage all your tasks from different areas in one place 
+          so you can stay on top of your game. Like a boss ;D</i></h3> 
+      </div>
       <Form 
         input = {input} 
         setInput = {setInput} 
