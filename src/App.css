@@ -94,7 +94,7 @@
 /* start school */
 
   .school-btn {
-      background: #ff9900;
+      background: #F9BD9F;
   }
 /* end school */
   .todo-item {
@@ -122,6 +122,8 @@
   .school {
     color: #ff9900;
   }
+
+  /* assumption: one category is chosen */
   /* end school */
   
   /* Custom Selector */

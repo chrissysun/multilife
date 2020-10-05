@@ -48,16 +48,14 @@ const Todo = ({ text, todo, todos, setTodos }) => {
             <button onClick = {completeHandler} className = "complete-btn">
                 <i className = "fas fa-check"></i>
             </button>
-            <button onClick = {deleteHandler} className = "trash-btn">
-                <i className = "fas fa-trash"></i>
-            </button>
-
             {/* attempt at making school begin */}
             <button onClick = {schoolHandler} className = "school-btn">
                 <i className = "fas fa-book"></i>
             </button>
             {/* attempt at making school end */}
-            
+            <button onClick = {deleteHandler} className = "trash-btn">
+                <i className = "fas fa-trash"></i>
+            </button>  
         </div>
     );
 }

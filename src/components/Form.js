@@ -37,11 +37,12 @@ const Form = ({ input, setInput, todos, setTodos, setStatus }) => {
             <div className= "select">
             <select onChange = {statusHandler} name= "todos" className= "filter-todo">
                 <option value= "all">All</option>
-                <option value= "completed">Completed</option>
-                <option value= "incomplete">Incomplete</option>
                 {/* attempt at school begin */}
                 <option value= "school">School</option>
                 {/* attempt at school end */}
+                <option value= "completed">Completed</option>
+                <option value= "incomplete">Incomplete</option>
+                
             </select>
         </div>
       </form>
