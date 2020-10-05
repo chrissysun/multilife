@@ -12,7 +12,8 @@ const Form = ({ input, setInput, todos, setTodos, setStatus }) => {
         e.preventDefault(); // prevent refresh
         setTodos([
             ...todos, 
-            {text: input, completed: false, id: Math.random() * 1000},
+            {text: input, completed: false, /*school*/school: false, /*school*/id: Math.random() * 1000,
+            },
             // update Math.random such that unique numbers are generated
         ]);
         setInput(''); // clear entry box after submission
@@ -38,6 +39,9 @@ const Form = ({ input, setInput, todos, setTodos, setStatus }) => {
                 <option value= "all">All</option>
                 <option value= "completed">Completed</option>
                 <option value= "incomplete">Incomplete</option>
+                {/* attempt at school begin */}
+                <option value= "school">School</option>
+                {/* attempt at school end */}
             </select>
         </div>
       </form>

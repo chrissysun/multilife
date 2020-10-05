@@ -33,6 +33,11 @@ function App() {
       case 'incomplete':
         setFilteredTodos(todos.filter(todo => todo.completed === false));
         break;
+      // school attempt begin
+      case 'school':
+        setFilteredTodos(todos.filter(todo => todo.school === true));
+        break;
+      // school attempt end
       default:
         setFilteredTodos(todos);
         break;
