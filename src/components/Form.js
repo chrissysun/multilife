@@ -13,7 +13,7 @@ const Form = ({ input, setInput, todos, setTodos, setStatus }) => {
         setTodos([
             ...todos, 
             {text: input, completed: false, id: Math.random() * 1000},
-            // update Math.random such that unique numbers are generated (get a package)
+            // update Math.random such that unique numbers are generated
         ]);
         setInput(''); // clear entry box after submission
     };

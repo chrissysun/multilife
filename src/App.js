@@ -30,7 +30,7 @@ function App() {
       case 'completed':
         setFilteredTodos(todos.filter(todo => todo.completed === true));
         break;
-      case 'uncompleted':
+      case 'incomplete':
         setFilteredTodos(todos.filter(todo => todo.completed === false));
         break;
       default:
@@ -76,6 +76,9 @@ function App() {
         setTodos = {setTodos} 
         filteredTodos = {filteredTodos}
       />
+      <br></br>
+      <br></br>
+      <h6>Created with ♡ by Christine Sun</h6>
     </div>
   );
 }
