@@ -77,6 +77,7 @@
   }
   
   .school-btn,
+  .work-btn,
   .complete-btn,
   .trash-btn {
     background: #cccccc;
@@ -92,12 +93,13 @@
     background: #9999ff;
   }
 
-
   .school-btn {
       background: #F9BD9F;
   }
 
-  /* blue 82C6F3 */
+  .work-btn {
+      background: #82C6F3;
+  }
 
   .todo-item {
     padding: 0rem 0.5rem;
@@ -105,6 +107,7 @@
   
   .fa-trash,
   .fa-book, 
+  .fa-briefcase,
   .fa-check {
     pointer-events: none;
   }
@@ -122,6 +125,10 @@
 
   .school {
     color: #ff9900;
+  }
+
+  .work {
+    color: #82C6F3;
   }
   
   /* Custom Selector */
@@ -165,4 +172,3 @@
   div {
     text-align: center;
   }
-  

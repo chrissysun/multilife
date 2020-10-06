@@ -30,6 +30,9 @@ function App() {
       case 'school':
         setFilteredTodos(todos.filter(todo => todo.school === true));
         break;
+      case 'work':
+        setFilteredTodos(todos.filter(todo => todo.work === true));
+        break;
       case 'completed':
         setFilteredTodos(todos.filter(todo => todo.completed === true));
         break;
