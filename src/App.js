@@ -33,6 +33,9 @@ function App() {
       case 'work':
         setFilteredTodos(todos.filter(todo => todo.work === true));
         break;
+      case 'personalProject':
+        setFilteredTodos(todos.filter(todo => todo.personalProject === true));
+        break;
       case 'completed':
         setFilteredTodos(todos.filter(todo => todo.completed === true));
         break;

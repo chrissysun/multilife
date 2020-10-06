@@ -40,6 +40,19 @@ const Todo = ({ text, todo, todos, setTodos }) => {
             return item;
         }));
     };
+
+    // categorize task as personal project  
+    const personalProjectHandler = () => {
+        setTodos(todos.map(item => {
+            if (item.id === todo.id) {
+                return {
+                    // adjust whether it's categorized as 'work'
+                    ...item, personalProject: !item.personalProject
+                }
+            }
+            return item;
+        }));
+    };
     
     // delete task from to-do list
     const deleteHandler = () => {
@@ -50,7 +63,9 @@ const Todo = ({ text, todo, todos, setTodos }) => {
         <div className = "todo">
             <li className = {`todo-item ${todo.completed ? "completed" : ""} 
                 ${todo.school ? "school" : ""}
-                ${todo.work ? "work" : ""}`}>
+                ${todo.work ? "work" : ""}
+                ${todo.personalProject ? "personalProject" : ""}
+                `}>
                     {text}
             </li>
             <button onClick = {completeHandler} className = "complete-btn">
@@ -61,6 +76,9 @@ const Todo = ({ text, todo, todos, setTodos }) => {
             </button>
             <button onClick = {workHandler} className = "work-btn">
                 <i className = "fas fa-briefcase"></i>
+            </button>
+            <button onClick = {personalProjectHandler} className = "personalProject-btn">
+                <i className = "fas fa-laptop"></i>
             </button>
             <button onClick = {deleteHandler} className = "trash-btn">
                 <i className = "fas fa-trash"></i>
