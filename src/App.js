@@ -88,6 +88,7 @@ function App() {
       <br></br>
       <br></br>
       <h6>Created with ♡ by Christine Sun</h6>
+      <br></br>
     </div>
   );
 }
