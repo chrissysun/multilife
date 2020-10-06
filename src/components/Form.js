@@ -18,6 +18,7 @@ const Form = ({ input, setInput, todos, setTodos, setStatus }) => {
                 work: false,
                 personalProject: false,
                 family: false,
+                selfCare: false,
                 id: Math.random() * 1000 // update with unique numbers
             },
         ]);
@@ -48,6 +49,7 @@ const Form = ({ input, setInput, todos, setTodos, setStatus }) => {
                 <option value = "work">Work</option>
                 <option value = "personalProject">Personal Project</option>
                 <option value = "family">Family</option>
+                <option value = "selfCare">Self-Care</option>
                 <option value = "incomplete">Incomplete</option>
                 <option value = "completed">Completed</option>
             </select>

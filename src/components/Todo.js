@@ -66,6 +66,19 @@ const Todo = ({ text, todo, todos, setTodos }) => {
             return item;
         }));
     };
+
+    // categorize task as self-care  
+    const selfCareHandler = () => {
+        setTodos(todos.map(item => {
+            if (item.id === todo.id) {
+                return {
+                    // adjust whether it's categorized as 'self-care'
+                    ...item, selfCare: !item.selfCare
+                }
+            }
+            return item;
+        }));
+    };
     
     // delete task from to-do list
     const deleteHandler = () => {
@@ -79,6 +92,7 @@ const Todo = ({ text, todo, todos, setTodos }) => {
                 ${todo.work ? "work" : ""}
                 ${todo.personalProject ? "personalProject" : ""}
                 ${todo.family ? "family" : ""}
+                ${todo.selfCare ? "selfCare" : ""}
                 `}>
                     {text}
             </li>
@@ -96,6 +110,9 @@ const Todo = ({ text, todo, todos, setTodos }) => {
             </button>
             <button onClick = {familyHandler} className = "family-btn">
                 <i className = "fas fa-home"></i>
+            </button>
+            <button onClick = {selfCareHandler} className = "selfCare-btn">
+                <i className = "fas fa-smile-beam"></i>
             </button>
             <button onClick = {deleteHandler} className = "trash-btn">
                 <i className = "fas fa-trash"></i>

@@ -39,6 +39,9 @@ function App() {
       case 'family':
         setFilteredTodos(todos.filter(todo => todo.family === true));
         break;
+      case 'selfCare':
+        setFilteredTodos(todos.filter(todo => todo.selfCare === true));
+        break;
       case 'completed':
         setFilteredTodos(todos.filter(todo => todo.completed === true));
         break;
