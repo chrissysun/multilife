@@ -46,8 +46,21 @@ const Todo = ({ text, todo, todos, setTodos }) => {
         setTodos(todos.map(item => {
             if (item.id === todo.id) {
                 return {
-                    // adjust whether it's categorized as 'work'
+                    // adjust whether it's categorized as 'personal project'
                     ...item, personalProject: !item.personalProject
+                }
+            }
+            return item;
+        }));
+    };
+
+    // categorize task as family  
+    const familyHandler = () => {
+        setTodos(todos.map(item => {
+            if (item.id === todo.id) {
+                return {
+                    // adjust whether it's categorized as 'family'
+                    ...item, family: !item.family
                 }
             }
             return item;
@@ -65,6 +78,7 @@ const Todo = ({ text, todo, todos, setTodos }) => {
                 ${todo.school ? "school" : ""}
                 ${todo.work ? "work" : ""}
                 ${todo.personalProject ? "personalProject" : ""}
+                ${todo.family ? "family" : ""}
                 `}>
                     {text}
             </li>
@@ -79,6 +93,9 @@ const Todo = ({ text, todo, todos, setTodos }) => {
             </button>
             <button onClick = {personalProjectHandler} className = "personalProject-btn">
                 <i className = "fas fa-laptop"></i>
+            </button>
+            <button onClick = {familyHandler} className = "family-btn">
+                <i className = "fas fa-home"></i>
             </button>
             <button onClick = {deleteHandler} className = "trash-btn">
                 <i className = "fas fa-trash"></i>

@@ -17,6 +17,7 @@ const Form = ({ input, setInput, todos, setTodos, setStatus }) => {
                 school: false, 
                 work: false,
                 personalProject: false,
+                family: false,
                 id: Math.random() * 1000 // update with unique numbers
             },
         ]);
@@ -38,15 +39,19 @@ const Form = ({ input, setInput, todos, setTodos, setStatus }) => {
             <button onClick = {submitTodoHandler} className= "todo-button" type= "submit">
                 <i className="fas fa-plus-square"></i>
             </button>
+
+            {/* Select from drop-down menu */}
             <div className= "select">
             <select onChange = {statusHandler} name= "todos" className= "filter-todo">
                 <option value = "all">All</option>
                 <option value = "school">School</option>
                 <option value = "work">Work</option>
                 <option value = "personalProject">Personal Project</option>
+                <option value = "family">Family</option>
                 <option value = "incomplete">Incomplete</option>
                 <option value = "completed">Completed</option>
             </select>
+
         </div>
       </form>
     );

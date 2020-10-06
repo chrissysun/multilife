@@ -79,6 +79,7 @@
   .school-btn,
   .work-btn,
   .personalProject-btn,
+  .family-btn,
   .complete-btn,
   .trash-btn {
     background: #cccccc;
@@ -106,6 +107,10 @@
       background: #99D17B;
   }
 
+  .family-btn {
+      background: #FF85C8;
+  }
+
   .todo-item {
     padding: 0rem 0.5rem;
   }
@@ -114,6 +119,7 @@
   .fa-book, 
   .fa-briefcase,
   .fa-laptop,
+  .fa-home,
   .fa-check {
     pointer-events: none;
   }
@@ -139,6 +145,10 @@
 
   .personalProject {
     color: #82c060;
+  }
+
+  .family {
+      color: #FF85C8;
   }
   
   /* Custom Selector */
