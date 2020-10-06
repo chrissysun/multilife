@@ -12,9 +12,11 @@ const Form = ({ input, setInput, todos, setTodos, setStatus }) => {
         e.preventDefault(); // prevent refresh
         setTodos([
             ...todos, 
-            {text: input, completed: false, /*school*/school: false, /*school*/id: Math.random() * 1000,
+            { text: input, 
+                completed: false, 
+                school: false, 
+                id: Math.random() * 1000 // update with unique numbers
             },
-            // update Math.random such that unique numbers are generated
         ]);
         setInput(''); // clear entry box after submission
     };
@@ -37,12 +39,9 @@ const Form = ({ input, setInput, todos, setTodos, setStatus }) => {
             <div className= "select">
             <select onChange = {statusHandler} name= "todos" className= "filter-todo">
                 <option value= "all">All</option>
-                {/* attempt at school begin */}
                 <option value= "school">School</option>
-                {/* attempt at school end */}
                 <option value= "completed">Completed</option>
                 <option value= "incomplete">Incomplete</option>
-                
             </select>
         </div>
       </form>

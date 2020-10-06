@@ -2,57 +2,49 @@ import React from "react";
 
 const Todo = ({ text, todo, todos, setTodos }) => {
 
-    // handle completing items in to-do list
+    // complete ("check off") task
     const completeHandler = () => {
         setTodos(todos.map(item => {
             if (item.id === todo.id) {
                 return {
-                    // mark completed as true
+                    // adjust whether it's categorized as 'completed'
                     ...item, completed: !item.completed
                 }
             }
             return item;
         }));
     };
-    
-    // handle deleting items in to-do list
-    const deleteHandler = () => {
-      setTodos(todos.filter((el) => el.id !== todo.id));  
-    };
 
-    // attempt at making school begin
+    // categorize task as school  
     const schoolHandler = () => {
         setTodos(todos.map(item => {
             if (item.id === todo.id) {
                 return {
+                    // adjust whether it's categorized as 'school'
                     ...item, school: !item.school
                 }
             }
             return item;
         }));
     };
-    // attempt at making school end
+    
+    // delete task from to-do list
+    const deleteHandler = () => {
+      setTodos(todos.filter((el) => el.id !== todo.id));  
+    };
 
     return (
         <div className = "todo">
-            {/* <li className = {`todo-item ${todo.completed ? "completed" : ""}`}>
-                {text} //ORIGINAL
-            </li>  */}
-            {/* school start */}
             <li className = {`todo-item ${todo.completed ? "completed" : ""} 
                 ${todo.school ? "school" : ""}`}>
                 {text}
             </li>
-            
-            {/* school end */}
             <button onClick = {completeHandler} className = "complete-btn">
                 <i className = "fas fa-check"></i>
             </button>
-            {/* attempt at making school begin */}
             <button onClick = {schoolHandler} className = "school-btn">
                 <i className = "fas fa-book"></i>
             </button>
-            {/* attempt at making school end */}
             <button onClick = {deleteHandler} className = "trash-btn">
                 <i className = "fas fa-trash"></i>
             </button>  

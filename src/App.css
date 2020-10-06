@@ -76,10 +76,9 @@
     flex: 1;
   }
   
-  .trash-btn,
-  /* right here */
   .school-btn,
-  .complete-btn {
+  .complete-btn,
+  .trash-btn {
     background: #cccccc;
     color: white;
     border: none;
@@ -88,21 +87,23 @@
     font-size: 1rem;
   }
 
+  /* Button Colors */
   .complete-btn {
     background: #9999ff;
   }
-/* start school */
+
 
   .school-btn {
       background: #F9BD9F;
   }
-/* end school */
+
+  /* blue 82C6F3 */
+
   .todo-item {
     padding: 0rem 0.5rem;
   }
   
   .fa-trash,
-  /* school here */
   .fa-book, 
   .fa-check {
     pointer-events: none;
@@ -112,19 +113,16 @@
     transform: translateY(10rem) rotateZ(20deg);
     opacity: 0;
   }
-  
+
+  /* Task text effects based on button presses */
   .completed {
     text-decoration: line-through;
     opacity: 0.5;
   }
 
-  /* start school */
   .school {
     color: #ff9900;
   }
-
-  /* assumption: one category is chosen */
-  /* end school */
   
   /* Custom Selector */
   select {
