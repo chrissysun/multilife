@@ -1,6 +1,6 @@
 ## About
 
-Multilife is a task manager designed to keep you organized. As a part-time student, part-time coder, part-time YouTuber, part-time family chef, and part-time yogi, I understand that it can sometimes feel like you have so many responsibilities to keep track of that are all over the place. Multilife is for those who are looking to stay on top of their game with a web app that is intuitive, distraction-free, and color-coded.
+Multilife is a task manager designed to keep you focused. As a part-time student, part-time coder, part-time YouTuber, part-time family chef, and part-time yogi, I understand that it can sometimes feel like you have so many responsibilities to keep track of that are all over the place. Multilife is for those who are looking to stay on top of their game with a web app that is intuitive, distraction-free, and color-coded.
 
 ## Instructions
 * Enter tasks via the entry box, then categorize them by clicking on the button that corresponds with the area of your life. The web app helps you see what you need to do for each area easily with its color-coded system. 
